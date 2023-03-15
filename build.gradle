@@ -17,8 +17,22 @@ dependencies {
     implementation 'org.apache.avro:avro:1.11.1'
     implementation 'io.confluent:kafka-avro-serializer:7.3.2'
 
+    runtimeOnly 'org.slf4j:slf4j-log4j12:2.0.6'
+
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+// Note: for IntelliJ IDE to mark the generated files as source.
+sourceSets {
+    src {
+        main {
+            java {
+                srcDirs 'build/generated-main-avro-java/'
+            }
+        }
+    }
 }
 
 test {
