@@ -1,0 +1,8 @@
+{"namespace": "com.pshakhlovich.avro",
+ "type": "record",
+ "name": "Greeting",
+ "fields": [
+     {"name": "text", "type": "string"},
+     {"name": "time", "type": ["long", "null"]}
+ ]
+}
